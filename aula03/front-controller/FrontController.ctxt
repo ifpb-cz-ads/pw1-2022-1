@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=FrontController
+comment0.text=\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ FrontController\ aqui.\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (um\ n\u00FAmero\ da\ vers\u00E3o\ ou\ uma\ data)\n
+comment1.params=
+comment1.target=FrontController()
+comment2.params=
+comment2.target=boolean\ isAuthenticUser()
+comment3.params=request
+comment3.target=void\ trackRequest(java.lang.String)
+comment4.params=request
+comment4.target=void\ dispatchRequest(java.lang.String)
+numComments=5

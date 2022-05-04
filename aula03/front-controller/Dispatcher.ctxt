@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Dispatcher
+comment0.text=\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ Dispatcher\ aqui.\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (um\ n\u00FAmero\ da\ vers\u00E3o\ ou\ uma\ data)\n
+comment1.params=
+comment1.target=Dispatcher()
+comment2.params=request
+comment2.target=void\ dispatch(java.lang.String)
+numComments=3
