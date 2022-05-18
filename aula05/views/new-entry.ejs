@@ -1,0 +1,19 @@
+<%- include('header') %>
+    <h2>Escreva uma nova postagem</h2>
+    <form method="post" role="form">
+        <div class="form-group">
+            <label for="title">Título</label>
+            <input type="text" class="form-control" id="title"
+                   name="title" placeholder="Título" required>
+        </div>
+        <div class="form-group">
+            <label for="content">Texto da postagem</label>
+            <textarea class="form-control" id="body" name="body"
+                      placeholder="Deixe sua mensagem"
+                      rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Postar" class="btn btn-primary">
+        </div>
+    </form>
+<%- include('footer') %>
