@@ -6,12 +6,12 @@ const path = require('path');
 
 const app = express();
 
-const fileStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
+//const fileStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
 
-app.use(logger("combined", {stream: fileStream}));
+//app.use(logger("combined", {stream: fileStream}));
 
 // simple logging with morgan
-//app.use(logger("short"));
+app.use(logger("dev"));
 
 app.use((request, response) => {
     response.writeHead(200, { "Content-Type": "text/plain" });
