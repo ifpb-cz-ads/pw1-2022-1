@@ -9,7 +9,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', (request, response) => {
     response.render('hello', {
-        message: 'Olá! Esse é meu site.'
+        message: 'Olá! Esse é meu app.'
     });
 });
 
