@@ -11,8 +11,10 @@ app.set('view engine', 'ejs');
 
 // cria um vetor global para conter as entradas
 let entries = [];
+const msg = [' pessoa deixou ', ' pessoas deixaram '];
 // torna o vetor acessível em todas as views
 app.locals.entries = entries;
+app.locals.msg = msg;
 
 // inicializa o logger com nível dev
 app.use(logger('dev'));

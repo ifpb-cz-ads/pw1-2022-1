@@ -1,18 +1,23 @@
 <%- include('header') %>
     <% if (entries.length) { %>
         <% for (const entry of entries) { %>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="text-muted pull-right">
+            <div class="card mt-2">
+                <div class="card-header">
+                    <div class="text-muted float-end">
                         <%= entry.published %>
                     </div>
                     <%= entry.title %>
                 </div>
-                <div class="panel-body">
+                <div class="card-body">
                     <%= entry.content %>
                 </div>
             </div>
         <% } %>
+        <div class="text-end mt-2">
+            <%= entries.length > 1 ?
+                entries.length + msg[1] : entries.length + msg[0] %>
+                uma mensagem! <3
+        </div>
     <% } else { %>
        Sem mensagens! <a href="/new-entry">Adicione uma!</a>
     <% } %>
