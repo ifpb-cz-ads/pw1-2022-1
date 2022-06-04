@@ -5,7 +5,8 @@
   "main": "00-middleware.js",
   "scripts": {
     "test": "jest",
-    "start": "node app.js"
+    "start": "node app.js",
+    "lint": "npx eslint app.js"
   },
   "keywords": [],
   "author": "",
