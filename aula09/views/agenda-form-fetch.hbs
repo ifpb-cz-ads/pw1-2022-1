@@ -1,0 +1,51 @@
+<h2>Escreva uma nova postagem</h2>
+<div id="agenda-form-container">
+    <form role="form" id="agenda-form">
+        <div class="mb-3">
+            <label for="title" class="form-label">Título</label>
+            <input type="text" class="form-control" id="title"
+                name="title" placeholder="Título" required>
+        </div>
+        <div class="mb-3">
+            <label for="content" class="form-label">Texto da postagem</label>
+            <textarea class="form-control" id="body" name="body"
+                    placeholder="Deixe sua mensagem"
+                    rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Postar" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+
+<script>
+    const agendaForm = document.getElementById('agenda-form');
+
+    agendaForm.addEventListener('submit', async(evt) => {
+        evt.preventDefault();
+
+        const form = evt.target;
+        const body = JSON.stringify({
+            title: form.elements.title.value,
+            body: form.elements.body.value
+        });
+        const headers = {'Content-type': 'application/json'};
+        const response = await fetch('/new-entry', {
+            method: 'POST',
+            body,
+            headers
+        });
+
+        if (response.redirected) {
+            window.location.href = response.url;
+        }
+    });
+
+    /*
+        const response = await fetch('/new-entry', { method: 'post', body, headers });
+        const agendaContainer = document.getElementById('agenda-form-container');
+        if (response.status === 200) {
+            agendaContainer.innerHTML = '</b>Elemento adicionado com sucesso</b>'
+        }
+    */
+</script>

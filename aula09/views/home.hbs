@@ -1,0 +1,23 @@
+<h1>
+    Livro de Visitas Express <a href="/new-entry" class="btn btn-primary float-end">
+        Escreva no livro de visitas
+    </a>
+</h1>
+{{#if entries.length }}
+    {{#each entries }}
+        <div class="card mt-2">
+            <div class="card-header">
+                <div class="text-muted float-end">
+                    {{ published }}
+                </div>
+                {{ title }}
+            </div>
+            <div class="card-body">
+                {{ content }}
+            </div>
+        </div>
+    {{/each}}
+{{/if}}
+{{#unless entries.length }}
+    Sem mensagens! <a href="/new-entry">Adicione uma!</a>
+{{/unless}}
