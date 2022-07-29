@@ -1,0 +1,41 @@
+## Listar
+{
+  contatos {
+    id
+    nome
+    telefone
+  }
+}
+
+## Pesquisar por id
+#{
+#  contato(id: 3) {
+#  	id
+#    nome
+#    telefone
+#  }
+#}
+
+## Criar
+#mutation {
+#  contatoCreate(input: {
+#    nome: "pedro",
+#    telefone: "87 98883-1133"
+#  }){
+#    id
+#    nome
+#    telefone
+#  }
+#}
+
+## Atualizar
+#mutation {
+#  contatoUpdate(id: 8, input: {
+#    nome: "pedro silva"
+#  })
+#}
+
+## Apagar
+#mutation {
+#  contatoDelete(id: 8)
+#}
